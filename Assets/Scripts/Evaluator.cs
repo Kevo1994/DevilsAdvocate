@@ -16,7 +16,7 @@ public class Evaluator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        check();
 	}
 	
 	// Update is called once per frame
