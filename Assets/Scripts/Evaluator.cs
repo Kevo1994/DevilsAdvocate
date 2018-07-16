@@ -10,13 +10,15 @@ public class Evaluator : MonoBehaviour {
     public RenderTexture vision;
     Texture2D converted;
 
+    public Text disp;
+
     public float totalScore;
 
     public Light spotlight;
 
 	// Use this for initialization
 	void Start () {
-        check();
+        //check();
 	}
 	
 	// Update is called once per frame
@@ -41,7 +43,7 @@ public class Evaluator : MonoBehaviour {
         lightsOn();
         getTex();
         Score();
-
+        disp.text = totalScore.ToString();
         
 
     }
@@ -107,7 +109,7 @@ public class Evaluator : MonoBehaviour {
                     case 0:
                         if(!inBounds)
                         {
-                          //  scored += 1;
+                            scored += 1;
                             
                         }
                         if(prevBlue)
@@ -125,7 +127,7 @@ public class Evaluator : MonoBehaviour {
                         }
                         else
                         {
-                            scored -= 1;
+                            //scored -= 1;
 
 
                         }
@@ -172,7 +174,7 @@ public class Evaluator : MonoBehaviour {
         }
 
         totalScore = ((scored / total)*100);
-        
+        totalScore += ((100 - totalScore) / 1.5f);
 
     }
 }
