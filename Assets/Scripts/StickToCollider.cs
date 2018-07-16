@@ -6,7 +6,7 @@ public class StickToCollider : MonoBehaviour {
 
     //public GameObject ColliderObject;
 
-    private Transform BlockerLocation;
+    private Transform blockerLocation;
 
 
 	// Use this for initialization
