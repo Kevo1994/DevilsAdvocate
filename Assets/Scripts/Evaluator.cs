@@ -18,7 +18,7 @@ public class Evaluator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //check();
+        lightsOff();
 	}
 	
 	// Update is called once per frame
@@ -109,13 +109,18 @@ public class Evaluator : MonoBehaviour {
                     case 0:
                         if(!inBounds)
                         {
-                            scored += .5f;
+                            scored += 1;
                             
                         }
                         if(prevBlue)
                         {
                             prevBlue = false;
                             
+                        }
+                        if(inBounds)
+                        {
+                            scored -= 1;
+
                         }
                         break;
 
@@ -127,7 +132,7 @@ public class Evaluator : MonoBehaviour {
                         }
                         else
                         {
-                            scored -= 1;
+                           // scored -= 1;
 
 
                         }
