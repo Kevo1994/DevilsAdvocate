@@ -109,7 +109,7 @@ public class Evaluator : MonoBehaviour {
                     case 0:
                         if(!inBounds)
                         {
-                            scored += 1;
+                            scored += .5f;
                             
                         }
                         if(prevBlue)
@@ -127,7 +127,7 @@ public class Evaluator : MonoBehaviour {
                         }
                         else
                         {
-                            //scored -= 1;
+                            scored -= 1;
 
 
                         }
@@ -174,7 +174,7 @@ public class Evaluator : MonoBehaviour {
         }
 
         totalScore = ((scored / total)*100);
-        totalScore += ((100 - totalScore) / 1.5f);
+        //totalScore += ((100 - totalScore) / 1.5f);
 
     }
 }
