@@ -43,7 +43,7 @@ public class Evaluator : MonoBehaviour {
         lightsOn();
         getTex();
         Score();
-        disp.text = totalScore.ToString();
+        disp.text = ((int)totalScore).ToString();
         
 
     }

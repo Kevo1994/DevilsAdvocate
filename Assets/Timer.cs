@@ -32,6 +32,12 @@ public class Timer : MonoBehaviour {
 
             percentage = (TimerLength - timeRemaining) / TimerLength;
             clockFace.fillAmount = percentage;
+            if(timeRemaining <= 0)
+            {
+
+                TimesUp();
+
+            }
         }
 
 
